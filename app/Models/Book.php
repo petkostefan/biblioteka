@@ -13,6 +13,7 @@ class Book extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
 
     public function izdavac()
     {

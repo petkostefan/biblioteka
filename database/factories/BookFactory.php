@@ -17,7 +17,7 @@ class BookFactory extends Factory
     public function definition()
     {
         $users = User::pluck('id')->toArray();
-        for ($i=0; $i < 3; $i++) { 
+        for ($i=0; $i < 4; $i++) { 
             $users[] = null;
         }
         $authors = Author::pluck('id')->toArray();
