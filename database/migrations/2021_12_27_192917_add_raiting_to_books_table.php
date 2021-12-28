@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddOcenaToKnjigaTable extends Migration
+class AddRaitingToBooksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class AddOcenaToKnjigaTable extends Migration
      */
     public function up()
     {
-        Schema::table('knjiga', function (Blueprint $table) {
+        Schema::table('books', function (Blueprint $table) {
             $table->integer('ocena');
         });
     }
@@ -25,7 +25,7 @@ class AddOcenaToKnjigaTable extends Migration
      */
     public function down()
     {
-        Schema::table('knjiga', function (Blueprint $table) {
+        Schema::table('books', function (Blueprint $table) {
             $table->dropColumn('ocena');
         });
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIzdavacTable extends Migration
+class CreateAuthorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateIzdavacTable extends Migration
      */
     public function up()
     {
-        Schema::create('izdavac', function (Blueprint $table) {
+        Schema::create('authors', function (Blueprint $table) {
             $table->id();
-            $table->string('naziv');
-            $table->string('adresa');
+            $table->string('ime');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateIzdavacTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('izdavac');
+        Schema::dropIfExists('authors');
     }
 }

@@ -4,20 +4,24 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Author;
+use App\Models\Publisher;
+use App\Models\User;
 
-class Knjiga extends Model
+
+class Book extends Model
 {
     use HasFactory;
 
 
     public function izdavac()
     {
-        $this->belongsTo(Izdavac::class);
+        $this->belongsTo(Publisher::class);
     }
 
     public function autor()
     {
-        $this->belongsTo(Autor::class);
+        $this->belongsTo(Author::class);
     }
 
     public function korisnik()
